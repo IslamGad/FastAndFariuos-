@@ -35,11 +35,7 @@ public class CarSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if (Input.GetKeyDown(KeyCode.PageUp))
-             Select(1);
-         else if (Input.GetKeyDown(KeyCode.PageDown))
-             Select(0); */
-
+        
 
 
     }

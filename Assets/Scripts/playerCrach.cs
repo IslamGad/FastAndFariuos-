@@ -5,16 +5,18 @@ using UnityEngine;
 public class playerCrach : MonoBehaviour
 {
     public playerCrach movement;
+      Destroy x = new Destroy();
 
     // This function runs when we hit another object.
     // We get information about the collision and call it "collisionInfo".
     void OnCollisionEnter(Collision collisionInfo)
     {
         // We check if the object we collided with has a tag called "Obstacle".
-        if (collisionInfo.collider.tag == "Obstacle")
+        if (collisionInfo.collider.name == "Cube")
         {
-            movement.enabled = false;   // Disable the players movement.
-        }
+            
+             x.explode(collisionInfo.collider.gameObject);
+         }
     }
 
 

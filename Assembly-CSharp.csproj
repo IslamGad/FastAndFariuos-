@@ -60,6 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Destroy.cs" />
+    <Compile Include="Assets\followTheCar.cs" />
+    <Compile Include="Assets\move.cs" />
+    <Compile Include="Assets\movement.cs" />
+    <Compile Include="Assets\playerCrach.cs" />
+>>>>>>> e1cdfefcbb022def84a0c6d7b117f2c7ed9943b0
     <Compile Include="Assets\race-track-lake\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Scripts\CarSelectorChoice.cs" />
     <Compile Include="Assets\Scripts\followTheCar.cs" />

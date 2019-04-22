@@ -13,7 +13,7 @@ public class playerCrach : MonoBehaviour
     {
         // We check if the object we collided with has a tag called "Obstacle".
         if (collisionInfo.collider.name == "Cube" && counter ==1)
-        {
+        { 
             
              x.explode(collisionInfo.collider.gameObject);
             counter++;

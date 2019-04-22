@@ -45,7 +45,7 @@ public class Destroy : MonoBehaviour
      float explosionRadius = 4f;
      float explosionUpward = 0.4f;
     //calculate pivot distance
-    cubesPivotDistance = cubeSize * cubesInRow / 2;
+    cubesPivotDistance = cubeSize * cubesInRow / 5;
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
         //make object disappear
@@ -55,9 +55,11 @@ public class Destroy : MonoBehaviour
         {
             for (int y = 0; y < cubesInRow; y++)
             {
+                GameObject piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
                 for (int z = 0; z < cubesInRow; z++)
                 {
-                    GameObject piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                  
 
                     //set piece position and scale
 
@@ -68,9 +70,27 @@ public class Destroy : MonoBehaviour
                     piece.AddComponent<Rigidbody>();
                     piece.GetComponent<Rigidbody>().mass = cubeSize;
                 }
+             
+            }
+         
+        }
+        /*
+        //get explosion position
+        Vector3 explosionPos = transform.position;
+        //get colliders in that position and radius
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
+        //add explosion force to all colliders in that overlap sphere
+        foreach (Collider hit in colliders)
+        {
+            //get rigidbody from collider object
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                //add explosion force to this body with given parameters
+                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
         }
-        
+        */
 
 
     }
